@@ -2,7 +2,7 @@
 #include "Vehicle.h"
 
 class GroundVehicle :
-    public virtual Vehicle
+    protected virtual Vehicle
 {
 protected:
     bool _tyre_type;

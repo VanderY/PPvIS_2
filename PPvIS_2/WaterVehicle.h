@@ -1,7 +1,7 @@
 #pragma once
 #include "Vehicle.h"
 class WaterVehicle :
-    public virtual Vehicle
+    protected virtual Vehicle
 {
 protected:
     int _immersion_level;

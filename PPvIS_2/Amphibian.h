@@ -3,13 +3,13 @@
 #include "GroundVehicle.h"
 
 class Amphibian
-	:public WaterVehicle, public GroundVehicle
+	:private WaterVehicle, private GroundVehicle
 {
 	std::string _type;
 public:
 	Amphibian(std::string manufacturer, std::string model, int max_speed,
 		bool tyre_type, bool engine_type, int imersion_level,
-		std::string type) : GroundVehicle(manufacturer, model, max_speed, tyre_type, engine_type), WaterVehicle(imersion_level)
+		std::string type) : Vehicle(manufacturer, model, max_speed), GroundVehicle(tyre_type, engine_type), WaterVehicle(imersion_level)
 	{
 		this->_type = type;
 	}
